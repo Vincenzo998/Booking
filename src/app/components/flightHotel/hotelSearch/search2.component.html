@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <form [formGroup]="HotelForm">
+    <div class="row custom-row p-1">
+      <div class="col-md-3">
+        <div class="input-group-sm py-2">
+          <input type="text" class="form-control input-group-sm  custom-input" placeholder="Locazione" aria-label="Locazione" formControlName="location">   
+        </div>
+      </div>
+      <div class="col my-auto">
+        <div class="row justify-content-end">
+          <a for="checkIN"> Check-In: </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="input-group-sm py-2">
+          <input type="date" class="form-control custom-input" placeholder="Check-In" aria-label="Check-In" formControlName="start_date"> 
+        </div>
+      </div>
+      <div class="col my-auto">
+        <div class="row justify-content-end">
+          <a for="checkOUT"> Check-Out: </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="input-group-sm py-2">
+          <input type="date" class="form-control custom-input" placeholder="Check-Out" aria-label="Check-Out" formControlName="end_date"> 
+        </div>
+      </div>
+      <div class="col">
+        <div class="py-2 text-center">
+          <button type="button" (click)="showHotel()" class="btn btn-sm custom-buttom"> Invia </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+
+<div class="container-fluid mt-3">
+    <div *ngFor="let hotel of ShowHotel" class="card body-card m-2">
+        <div class="card-body">
+            <h5 class="card-title border-bottom p-1 color-text"> {{hotel.property_name}} </h5>
+            <p class="card-text"> Indirizzo: {{hotel.address.line1}} , {{hotel.address.city}}</p>
+            <p class="card-text"> Prezzo: {{hotel.total_price.amount}} $</p>
+            <p class="card-text"> Telefono: {{hotel.contacts[0]?.detail}} Fax: {{hotel.contacts[1]?.detail}}</p>
+            <p class="card-text"> Email: {{hotel.contacts[2]?.detail}}</p>
+            <p class="card-text"> {{hotel.contacts[3]?.detail}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.body-card{
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px #b1b1b1;
+    background: #000080;
+    color: white;
+}
+
+.color-text{
+    color: #1E90FF!important;
+}

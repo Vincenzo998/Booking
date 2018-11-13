@@ -1,0 +1,36 @@
+<div class="container-fluid px-0">  
+  <div class="row color">
+    <div class="col">
+      <h4 class="p-3"> Ricerca Treni </h4>
+    </div>
+  </div>
+  <div class="row justify-content-md-center py-3 mx-4 border-bottom">
+    <div class="col-md-8 my-auto">
+      <form [formGroup]="TrainForm">
+        <div class="row custom-row p-1">
+          <div class="col-md-4">
+            <div class="input-group-sm py-2">
+              <input type="text" class="form-control custom-input" placeholder="Stazione" aria-label="Stazione" formControlName="origin">   
+            </div>
+          </div>
+          <div class="col my-auto">
+            <div class="row justify-content-end">
+              <a for="departureDate"> Data Partenza: </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group-sm py-2">
+              <input type="date" class="form-control custom-input" id="departureDate" formControlName="departure_date"> 
+            </div>
+          </div>
+          <div class="col">
+            <div class="py-2 text-center">
+              <button type="button" (click)="showTrain()" class="btn btn-sm custom-buttom"> Invia </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  

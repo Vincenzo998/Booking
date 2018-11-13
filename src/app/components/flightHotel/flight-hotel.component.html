@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row color-header">
+    <div class="col">
+      <h4 class="p-3"> Ricerca Voli e Hotel </h4>
+    </div>
+  </div>
+  <div class="row mt-4 mx-1 mb-2 border-bottom">
+    <div class="col-md-4">
+      <label for="inputGroupSelect01"> 
+        <h6 class="color"> Scegli cosa cercare </h6>
+      </label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01"> 
+            <i class="fas fa-search"></i> 
+          </label>
+        </div>
+        <select (change)="change($event)"  class="custom-select customize" id="inputGroupSelect01">
+          <option value="air"> Volo </option>
+          <option value="hotel"> Hotel </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center mt-4">
+    <div class="col-md-8 my-auto">
+      <div *ngIf = "isavailable; then air else hotel"></div>
+      <ng-template #air>
+        <app-search></app-search>
+      </ng-template>
+      <ng-template #hotel>
+        <!-- Output -->
+        <app-search2 (formResults)="onFormsResult($event)"></app-search2>
+        <!-- Input -->
+        <app-table2 [ShowHotel]="ShowListHotel"></app-table2>
+      </ng-template>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,38 @@
+.color{
+    background: #000080;
+    color: white;
+}
+
+.custom-input{
+    border-radius: 30px;
+}
+
+.custom-buttom{
+    border-radius: 30px;
+    background: #1E90FF;
+    color: white;
+    width: 80px;
+}
+
+.custom-row{
+    box-shadow: 4px 4px 8px #b1b1b1;
+    border-radius: 50px;
+}
+
+.custom-card-row{
+    border-radius: 10px;
+}
+
+.body-card{
+    background: #000080;
+    color: white;
+}
+
+.color-row{
+    color: #1E90FF!important;
+}
+
+.img-card{
+    height: 100px;
+    width: 100px;
+}

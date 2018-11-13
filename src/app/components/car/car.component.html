@@ -1,0 +1,67 @@
+<div class="container-fluid">  
+  <div class="row color">
+    <div class="col">
+      <h4 class="p-3"> Ricerca Auto </h4>
+    </div>
+  </div>
+  <div class="row justify-content-md-center py-4 mx-4 border-bottom">
+    <div class="col-md-9 my-auto">
+      <form [formGroup]="CarForm">
+        <div class="row custom-row p-1">
+          <div class="col-md-3">
+            <div class="input-group-sm py-2">
+              <input type="text" class="form-control custom-input" placeholder="Locazione" aria-label="Locazione" formControlName="location">   
+            </div>
+          </div>
+          <div class="col my-auto">
+            <div class="row justify-content-end">
+              <a for="dateWithdrawal"> Data Ritiro: </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group-sm py-2">
+              <input type="date" class="form-control custom-input" id="dateWithdrawal" formControlName="pick_up"> 
+            </div>
+          </div>
+          <div class="col my-auto">
+            <div class="row justify-content-end">
+              <a for="dateDelivery"> Data Consegna: </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group-sm py-2">
+              <input type="date" class="form-control custom-input" id="dateDelivery" formControlName="drop_off"> 
+            </div>
+          </div>
+          <div class="col">
+            <div class="py-2 text-center">
+              <button type="button" (click)="showCar()" class="btn btn-sm custom-buttom"> Invia </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row-md-8 m-3">
+    <div *ngFor="let car of listCar" class="p-3">
+      <div class="card-body">
+          <h5 class="card-title border-bottom py-3 color-row"> Concessionario situato in : {{car.airport}}</h5>
+          <p class="card-text m-1 p-2 custom-row body-card"> Indirizzo: {{car.address.line1}} , {{car.address.city}} , {{car.address.country}} </p>
+      </div>
+      <div class="row p-3 justify-content-md-center">
+        <div *ngFor="let singleCar of car.cars" class="card col-md-3 m-1 body-card custom-card-row m-2">
+          <img *ngIf="singleCar.images" class="img-card p-2" src="{{singleCar.images[0].url}}" alt="Responsive image">
+          <div class="card-body">
+            <h5 class="card-title border-bottom"> 
+              <span *ngIf="singleCar.images" class="color-row"> {{singleCar.images[0].category}} </span>
+            </h5>
+            <p class="card-text"> Prezzo: {{singleCar.estimated_total.amount}} $ </p>
+            <p class="card-text"> Categoria: {{singleCar.vehicle_info.category}} </p>
+            <p class="card-text"> Tipo: {{singleCar.vehicle_info.type}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

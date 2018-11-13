@@ -1,0 +1,13 @@
+.color{
+    background: #000080;
+    color: white;
+}
+
+.color1{
+    color : white;
+    text-decoration: none;
+}
+
+.color1:hover {
+    color: #b1b1b1;
+}
